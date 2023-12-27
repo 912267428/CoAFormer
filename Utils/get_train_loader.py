@@ -156,7 +156,7 @@ def get_train_loader_byint(dir, batch_size=32):  # Internet数据集上的trainl
 
 def get_train_loader_byvoc(dir, batch_size=16, istrain=True, label_size=30,trans=None):
     dataset = VocDataset(dir, is_train=istrain, label_size=label_size, trans=trans)
-    loader = DataLoader(dataset, batch_size=batch_size, shuffle=istrain, num_workers=8)
+    loader = DataLoader(dataset, batch_size=batch_size, shuffle=istrain, num_workers=4)
 
     return loader
 
